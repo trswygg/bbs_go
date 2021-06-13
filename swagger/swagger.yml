@@ -1,0 +1,62 @@
+swagger: "2.0"
+info:
+  title: mobile API
+  description: mobile has every tool to get any job done, so codename for the new
+    mobile APIs.
+  version: 1.0.0
+  contact:
+    email: astaxie@gmail.com
+basePath: /api
+paths:
+  /misc/captcha/:
+    get:
+      tags:
+        - misc
+      description: 获取图形验证码
+      operationId: CaptchaController.GetCaptcha
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Captcha'
+    post:
+      tags:
+        - misc
+      description: 校验图形验证码
+      operationId: CaptchaController.VerifyCaptcha
+      parameters:
+        - in: body
+          name: body
+          description: 验证码
+          required: true
+          schema:
+            $ref: '#/definitions/models.Captcha'
+      responses:
+        "200":
+          description: models.Captcha
+  /user/login/:
+    get:
+      tags:
+        - user
+  /user/logout/:
+    get:
+      tags:
+        - user
+definitions:
+  models.Captcha:
+    title: Captcha
+    type: object
+    properties:
+      B64s:
+        type: string
+      ID:
+        type: string
+      Result:
+        type: boolean
+tags:
+  - name: misc
+    description: |
+      CaptchaController Captcha 图形验证码
+  - name: user
+    description: |
+      UserController Operations about Users

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fc0b38cf-91b7-4852-8c68-dce3d1c12e2c" name="VCM-1c2g" url="http://49.232.82.14">
+        <fileTransfer rootFolder="/home/ubuntu" accessType="SFTP" host="49.232.82.14" port="22" sshConfigId="e10b7806-45dd-4175-8fbc-4fbf19f46a1c" sshConfig="ubuntu@49.232.82.14:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
